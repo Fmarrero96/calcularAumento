@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
     {cod: '30',
     descriptivo:' - Ex Adicional',
     plata:0},
-    {cod: '57',
+    {cod: '60',
     descriptivo:' - Cuenta a Futuros Aumentos',
     plata:0},
     {cod: '280',
