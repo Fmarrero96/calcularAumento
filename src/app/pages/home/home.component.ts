@@ -39,22 +39,31 @@ export class HomeComponent implements OnInit {
 
   items: Item[] = [
     {cod: '20',
+    descriptivo:' - Basico',
     plata:0},
     {cod: '30',
+    descriptivo:' - Ex Adicional',
     plata:0},
     {cod: '57',
+    descriptivo:' - Cuenta a Futuros Aumentos',
     plata:0},
     {cod: '280',
+    descriptivo:' - Presentismo',
     plata:0},
     {cod: '281',
+    descriptivo:' - Productividad',
     plata:0},
     {cod: '330',
+    descriptivo:' - Canasta Pass',
     plata:0},
     {cod: '350',
+    descriptivo:' - Almuerzo',
     plata:0},
     {cod: '5907',
+    descriptivo:' - Comp mayor gasto',
     plata:0},
     {cod: 'Aumento',
+    descriptivo:'',
     plata:0}
   ]
 

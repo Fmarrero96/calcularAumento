@@ -3,7 +3,7 @@
 <div class="centrar">
     <label>Codigos:</label> 
 <div *ngFor="let item of items" [ngSwitch]="item.cod">
-     <label>{{item.cod}}</label> 
+     <label>{{item.cod + item.descriptivo}} </label> 
      <input type="number" [(ngModel)]="item.plata"> 
      <div *ngIf="show">
         <p *ngSwitchCase="20">Nuevo monto: {{item20.toFixed(2)}}</p> 
