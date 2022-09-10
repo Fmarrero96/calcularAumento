@@ -1,4 +1,33 @@
+<div class="centrar">
 <h1>Calcular aumento de sueldo</h1>
-<div *ngFor="let item of items"> <label>{{item.cod}}</label> <input type="number" [(ngModel)]="item.plata">  <a>{{item.plata}}</a></div>
-<div *ngIf="show"> <p>Jubilacion: {{jubilacion}}</p>  <p>INSSJP: {{INSSJP}}</p> <p>Osseg: {{osseg}}</p>  <p>Jubilacion: {{jubilacion}}</p> <p>sindicato: {{sindicato}}</p>  </div>
+<div class="centrar">
+    <label>Codigos:</label> 
+<div *ngFor="let item of items" [ngSwitch]="item.cod">
+     <label>{{item.cod}}</label> 
+     <input type="number" [(ngModel)]="item.plata"> 
+     <div *ngIf="show">
+        <p *ngSwitchCase="20">Nuevo monto: {{item20.toFixed(2)}}</p> 
+        <p *ngSwitchCase="30">Nuevo monto: {{item20.toFixed(2)}}</p> 
+        <p *ngSwitchCase="57">Nuevo monto: {{item57.toFixed(2)}}</p> 
+        <p *ngSwitchCase="280">Nuevo monto: {{item280.toFixed(2)}}</p> 
+        <p *ngSwitchCase="281">Nuevo monto: {{item281.toFixed(2)}}</p> 
+        <p *ngSwitchCase="330">Nuevo monto: {{item280.toFixed(2)}}</p> 
+        <p *ngSwitchCase="350">Nuevo monto: {{item350.toFixed(2)}}</p>
+    </div>
+</div>
+<label>Sindicato</label>
+<input type="checkbox" (click)="sindicatoToggle()">
+<div *ngIf="show"> 
+    <p>Nuevo:</p>
+    <p>Jubilacion: {{nuevoJubilacion.toFixed(2)}}</p>  
+    <p>INSSJP: {{nuevoINSSJP.toFixed(2)}}</p> 
+    <p>Osseg: {{nuevoOsseg.toFixed(2)}}</p>  
+    <p *ngIf="sindicatOk">Sindicato: {{nuevoSindicato.toFixed(2)}}</p>  
+    <p>Sueld Bruto: {{nuevoBruto.toFixed(2)}}</p> 
+    <p>No Remunerativos: {{noRemunerativo.toFixed(2)}}</p>
+    <p>Retenciones: {{nuevaRetenciones.toFixed(2)}}</p>
+    <p>Sueldo Neto: {{nuevoNeto.toFixed(2)}}</p>
+</div>
 <button (click)="calcular()">Calcular Aumento</button>
+</div>
+</div>
