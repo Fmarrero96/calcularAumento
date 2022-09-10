@@ -1,7 +1,6 @@
 <div class="centrar">
 <h1>Calcular aumento de sueldo</h1>
 <div class="centrar">
-    <label>Codigos:</label> 
 <div *ngFor="let item of items" [ngSwitch]="item.cod">
      <label>{{item.cod + item.descriptivo}} </label> 
      <input type="number" [(ngModel)]="item.plata"> 
