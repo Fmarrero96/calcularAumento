@@ -1,0 +1,4 @@
+<h1>Calcular aumento de sueldo</h1>
+<div *ngFor="let item of items"> <label>{{item.cod}}</label> <input type="number" [(ngModel)]="item.plata">  <a>{{item.plata}}</a></div>
+<div *ngIf="show"> <p>Jubilacion: {{jubilacion}}</p>  <p>INSSJP: {{INSSJP}}</p> <p>Osseg: {{osseg}}</p>  <p>Jubilacion: {{jubilacion}}</p> <p>sindicato: {{sindicato}}</p>  </div>
+<button (click)="calcular()">Calcular Aumento</button>
