@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-top: 0.5%;
+}
+
+
+footer{
+    width: 100%;
+    border-top-color: #1d67d7;
+    border-top-style: solid;
+    border-top-width: 1px;
+
+    div{
+        //padding: 15px 10px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            font-size: 15px;
+            font-family: 'Exo', sans-serif;
+        }
+
+        div{
+            display: flex;
+                a{
+                img{
+                    width: 75%;
+                }
+            }
+        }
+    }
+    
+    
+}
