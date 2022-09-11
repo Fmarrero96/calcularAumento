@@ -22,7 +22,8 @@
     <p>INSSJP: {{nuevoINSSJP.toFixed(2)}}</p> 
     <p>Osseg: {{nuevoOsseg.toFixed(2)}}</p>  
     <p *ngIf="sindicatOk">Sindicato: {{nuevoSindicato.toFixed(2)}}</p>  
-    <p>Sueld Bruto: {{nuevoBruto.toFixed(2)}}</p> 
+    <p class="red" *ngIf="nuevoBruto > 280792; else elseBlock">Sueld Bruto: {{nuevoBruto.toFixed(2)}} UPAA PAGAS GANANCIAS</p> 
+    <ng-template #elseBlock><p>Sueld Bruto: {{nuevoBruto.toFixed(2)}}</p></ng-template>
     <p>No Remunerativos: {{noRemunerativo.toFixed(2)}}</p>
     <p>Retenciones: {{nuevaRetenciones.toFixed(2)}}</p>
     <p>Sueldo Neto: {{nuevoNeto.toFixed(2)}}</p>
